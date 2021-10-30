@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://JAVA.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<servlet>
+		<servlet-name>map1</servlet-name>
+		<servlet-class>com.das.AddServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>map1</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>map2</servlet-name>
+		<servlet-class>com.das.SqServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>map2</servlet-name>
+		<url-pattern>/sq</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>map3</servlet-name>
+		<servlet-class>com.das.ServletConfigContext</servlet-class>
+
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>my wife Liz</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>pet</param-name>
+			<param-value>my pet wolfen</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>map3</servlet-name>
+		<url-pattern>/family</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>my wife Elizabeth</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>pet</param-name>
+		<param-value>my pet Wolfen</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>FileUploadMap</servlet-name>
+		<servlet-class>com.das.FileUpload</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FileUploadMap</servlet-name>
+		<url-pattern>/FileUpload</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>com.das.Login</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/loginprocess</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>com.das.Logout</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logoutprocess</url-pattern>
+	</servlet-mapping>
+
+</web-app>
